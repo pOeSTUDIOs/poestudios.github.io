@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>pOe.Tres Studios</title>
-</head>
-<body>
-HIYO BRYCE :D
-</body>
-</html>
+---
+layout: default
+title: Blog
+---
+
+{% for post in site.posts %}
+<div class="blog-post">
+  <h2 class="blog-post-title">{{ post.title }}</h2>
+  <p class="blog-post-meta">{{ post.date | date_to_string }}</p>
+  <div class="blog-post-content">{{ post.content }}</div>
+</div><!-- /.blog-post -->
+{% endfor %}
